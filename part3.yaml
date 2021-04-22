@@ -1,0 +1,18 @@
+version: '3'
+services:
+  chatbot:
+    image: 7940image
+    environment:
+      - ACCESS_TOKEN=1691346266:AAE-n9M-sN6rpJj2OMgLPsKH4z6OTsr0r_4
+      - HOST=redis
+      - PASSWORD=comp7940passwordlab8
+      - REDISPORT=6379
+    # missing instructions for setting the entrypoint and/or command
+    entrypoint: python chatbot.py
+    depends_on:
+      - redis
+  redis:
+    image: redis
+    volumes:
+       - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["/usr/local/etc/redis/redis.conf"]

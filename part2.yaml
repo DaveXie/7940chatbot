@@ -1,0 +1,12 @@
+version: '3'
+services:
+  chatbot:
+    image: 7940image
+    # missing instructions for setting environment variable
+    environment:
+      - ACCESS_TOKEN=1691346266:AAE-n9M-sN6rpJj2OMgLPsKH4z6OTsr0r_4
+      - HOST=redis-18976.c124.us-central1-1.gce.cloud.redislabs.com
+      - PASSWORD=rhOK7SQtW4baUgkqlOQ4VJ4Eh8j9C1pc
+      - REDISPORT=18976
+    # missing instructions for setting the entrypoint and/or command
+    entrypoint: python chatbot.py
